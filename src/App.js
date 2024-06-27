@@ -14,7 +14,7 @@ import { useState } from 'react';
 function App() {
   const[category, setCategory] = useState("")
   const [searchTerm, setSearchTerm] = useState("")
-  const handleCAtegoryClick = (category)=>{
+  const handleCategoryClick = (category)=>{
     setCategory(category)
     setSearchTerm("")
   }
@@ -38,11 +38,11 @@ function App() {
                   Categories
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
-                  <Dropdown.Item onClick={()=>{handleCAtegoryClick("General")}}>General</Dropdown.Item>
-                  <Dropdown.Item onClick={()=>{handleCAtegoryClick("Business")}}>Business</Dropdown.Item>
-                  <Dropdown.Item onClick={()=>{handleCAtegoryClick("Technology")}}>Technology</Dropdown.Item>
-                  <Dropdown.Item onClick={()=>{handleCAtegoryClick("Sports")}}>Sports</Dropdown.Item>
-                  <Dropdown.Item onClick={()=>{handleCAtegoryClick("Entertainment")}}>Entertainment</Dropdown.Item>
+                  <Dropdown.Item onClick={()=>{handleCategoryClick("General")}}>General</Dropdown.Item>
+                  <Dropdown.Item onClick={()=>{handleCategoryClick("Business")}}>Business</Dropdown.Item>
+                  <Dropdown.Item onClick={()=>{handleCategoryClick("Technology")}}>Technology</Dropdown.Item>
+                  <Dropdown.Item onClick={()=>{handleCategoryClick("Sports")}}>Sports</Dropdown.Item>
+                  <Dropdown.Item onClick={()=>{handleCategoryClick("Entertainment")}}>Entertainment</Dropdown.Item>
                 </Dropdown.Menu> 
               </Dropdown>
             </Nav>
@@ -65,11 +65,11 @@ function App() {
           <Col xs={12} md={3}>
             <h5>Categories</h5>
             <Nav className="flex-column">
-              <Nav.Link onClick={()=>{handleCAtegoryClick("General")}}>General</Nav.Link>
-              <Nav.Link onClick={()=>{handleCAtegoryClick("Business")}}>Business</Nav.Link>
-              <Nav.Link onClick={()=>{handleCAtegoryClick("Technology")}}>Technology</Nav.Link>
-              <Nav.Link onClick={()=>{handleCAtegoryClick("Sports")}}>Sports</Nav.Link>
-              <Nav.Link onClick={()=>{handleCAtegoryClick("Entertainment")}}>Entertainment</Nav.Link>
+              <Nav.Link onClick={()=>{handleCategoryClick("General")}}>General</Nav.Link>
+              <Nav.Link onClick={()=>{handleCategoryClick("Business")}}>Business</Nav.Link>
+              <Nav.Link onClick={()=>{handleCategoryClick("Technology")}}>Technology</Nav.Link>
+              <Nav.Link onClick={()=>{handleCategoryClick("Sports")}}>Sports</Nav.Link>
+              <Nav.Link onClick={()=>{handleCategoryClick("Entertainment")}}>Entertainment</Nav.Link>
             </Nav>
           </Col>
           <Col xs={12} md={9}>

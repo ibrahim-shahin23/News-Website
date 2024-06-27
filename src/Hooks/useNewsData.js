@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 const useNewsData = (category, searchTerm) => {
   const [newsData, setNewsData] = useState([]);
-  const [loading, setLoading] = useState([]);
-  const [error, setError] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   useEffect(() => {
     async function fetchNewsData() {
       try {
