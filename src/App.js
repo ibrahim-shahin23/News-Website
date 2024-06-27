@@ -11,6 +11,7 @@ import {
 } from 'react-bootstrap';
 import NewsList from './Components/NewsList';
 import { useState } from 'react';
+import CurrencyList from './Components/currencyList';
 function App() {
   const[category, setCategory] = useState("")
   const [searchTerm, setSearchTerm] = useState("")
@@ -61,6 +62,12 @@ function App() {
         </Container>
       </Navbar>
       <Container>
+        <Row>
+          <h1>Currency Rates</h1>
+        <CurrencyList/>
+        </Row>
+        </Container>
+        <Container>
         <Row>
           <Col xs={12} md={3}>
             <h5>Categories</h5>
