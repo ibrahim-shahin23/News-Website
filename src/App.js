@@ -63,6 +63,20 @@ function App() {
                   </Dropdown.Item>
                   <Dropdown.Item
                     onClick={() => {
+                      handleCategoryClick('science');
+                    }}
+                  >
+                    science
+                  </Dropdown.Item>
+                  <Dropdown.Item
+                    onClick={() => {
+                      handleCategoryClick('health');
+                    }}
+                  >
+                    health
+                  </Dropdown.Item>
+                  <Dropdown.Item
+                    onClick={() => {
                       handleCategoryClick('Sports');
                     }}
                   >
@@ -94,14 +108,14 @@ function App() {
       </Navbar>
       <Container>
         <Row>
+          <Col>
         <h3>Gold Prices</h3>
           <GoldList />
-        </Row>
-      </Container>
-      <Container>
-        <Row>
+          </Col>
+        <Col>
           <h3>Currency Rates</h3>
           <CurrencyList />
+        </Col>
         </Row>
       </Container>
       <Container>
@@ -129,6 +143,20 @@ function App() {
                 }}
               >
                 Technology
+              </Nav.Link>
+              <Nav.Link
+                onClick={() => {
+                  handleCategoryClick('science');
+                }}
+              >
+                science
+              </Nav.Link>
+              <Nav.Link
+                onClick={() => {
+                  handleCategoryClick('health');
+                }}
+              >
+                health
               </Nav.Link>
               <Nav.Link
                 onClick={() => {

@@ -19,7 +19,7 @@ function CustomPagination(props) {
     return pageItems;
   };
   return <div className='d-flex justify-content-center'>
-    <Pagination>
+    <Pagination className='m-3'>
         <Pagination.Prev disabled={currentPage ===1} onClick={()=> handlePageClick(currentPage-1)}/>
         {renderPageItems()}
         <Pagination.Next disabled={currentPage ===totalPages} onClick={()=> handlePageClick(currentPage+1)}/>
