@@ -1,8 +1,13 @@
 import { Card, Col, Container, Row } from 'react-bootstrap';
 import useNewsData from '../Hooks/useNewsData';
+import CustomPagination from './CustomPagination';
+import { useState } from 'react';
 
 const NewsList = (props) => {
   const { category, searchTerm } = props;
+  const [currentPage, setCurrentPage] = useState(1);
+  const pageSize = 4;
+  const onPageChange = (pageNumber)=> setCurrentPage(pageNumber)
 
   const { newsData, loading, error } = useNewsData(category, searchTerm);
   if (loading) {
@@ -12,10 +17,16 @@ const NewsList = (props) => {
     return <div>Error: {error.message}</div>;
   }
 
+  const totalArticles = newsData.length;
+  const totalPages = Math.ceil(totalArticles / pageSize);
+  const startIndex = (currentPage - 1) * pageSize;
+  const endIndex = startIndex + pageSize;
+  const currentArticles = newsData.slice(startIndex, endIndex);
+
   return (
     <Container>
       <Row>
-        {newsData?.map((article) => (
+        {currentArticles?.map((article) => (
           <Col xs={12} md={6} key={article.url}>
             <Card>
               <Card.Img src={article.urlToImage} variant="top" />
@@ -28,6 +39,7 @@ const NewsList = (props) => {
           </Col>
         ))}
       </Row>
+      <CustomPagination currentPage={currentPage} totalPages={totalPages} onPageChange={onPageChange}/>
     </Container>
   );
 };

@@ -9,7 +9,7 @@ const useGoldData = () => {
     const fetchGoldPrices = async () => {
       try {
         setLoading(true);
-        const apikey = 'goldapi-3ox0i2slxxjkcqv-io'; //process.env.GOLD_PRICE_API_KEY;
+        const apikey = process.env.REACT_APP_GOLD_API_KEY; //'goldapi-3ox0i2slxxjkcqv-io';
         console.log(apikey);
         const headers = {
           'x-access-token': apikey,
@@ -26,7 +26,6 @@ const useGoldData = () => {
         const goldPrices = Object.fromEntries(
           Object.entries(data).filter(([key]) => desiredKeys.includes(key))
         );        
-        console.log(goldPrices);
         setprices(goldPrices);
         setLoading(false);
       } catch (error) {
