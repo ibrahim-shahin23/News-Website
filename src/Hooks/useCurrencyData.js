@@ -10,8 +10,7 @@ const useCurrencyData = () => {
       try {
         setLoading(true);
         const apikey = process.env.REACT_APP_CURRENCY_API_KEY;
-        console.log(apikey)
-        const apiUrl = `https://api.currencyapi.com/v3/latest?apikey=cur_live_qEJLtoafPAiDAKP7HllINdiOYA6ZhrZhYTIjnYb5&currencies=EGP%2CEUR%2CUSD%2CCAD`;
+        const apiUrl = `https://api.currencyapi.com/v3/latest?apikey=${apikey}&currencies=EGP%2CEUR%2CCAD`;
         const response = await fetch(apiUrl);
         const currencydata = await response.json();
         setRates(currencydata.data);

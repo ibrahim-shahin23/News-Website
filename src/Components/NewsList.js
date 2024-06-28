@@ -6,7 +6,7 @@ import { useState } from 'react';
 const NewsList = (props) => {
   const { category, searchTerm } = props;
   const [currentPage, setCurrentPage] = useState(1);
-  const pageSize = 4;
+  const pageSize = 6;
   const onPageChange = (pageNumber)=> setCurrentPage(pageNumber)
 
   const { newsData, loading, error } = useNewsData(category, searchTerm);
@@ -28,7 +28,7 @@ const NewsList = (props) => {
       <Row>
         {currentArticles?.map((article) => (
           <Col xs={12} md={6} key={article.url}>
-            <Card>
+            <Card className='mt-5'>
               <Card.Img src={article.urlToImage} variant="top" />
               <Card.Body>
                 <Card.Title>{article.title}</Card.Title>

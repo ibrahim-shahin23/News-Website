@@ -20,6 +20,8 @@ function App() {
     setCategory(category);
     setSearchTerm('');
   };
+  const myStyles = {
+  backgroundColor: 'rgb(222 226 227)'}
   const handleSearch = (event) => {
     event.preventDefault();
     setCategory('');
@@ -27,7 +29,7 @@ function App() {
   };
   return (
     <>
-      <Navbar bg="light" expand="lg" className="mb-4">
+      <Navbar style={myStyles} expand="lg" className="mb-4">
         <Container>
           <Navbar.Brand href="/" className="fw-bold fs-4">
             News App
@@ -108,11 +110,11 @@ function App() {
       </Navbar>
       <Container>
         <Row>
-          <Col>
+          <Col className='m-3'>
         <h3>Gold Prices</h3>
           <GoldList />
           </Col>
-        <Col>
+        <Col className='m-3'>
           <h3>Currency Rates</h3>
           <CurrencyList />
         </Col>
