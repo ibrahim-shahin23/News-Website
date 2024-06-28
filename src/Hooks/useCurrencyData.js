@@ -9,9 +9,10 @@ const useCurrencyData = () => {
     const fetchExchangeRates = async () => {
       try {
         setLoading(true);
-        const response = await fetch(
-          'https://api.currencyapi.com/v3/latest?apikey=cur_live_qEJLtoafPAiDAKP7HllINdiOYA6ZhrZhYTIjnYb5&currencies=EGP%2CEUR%2CUSD%2CCAD'
-        );
+        const apikey = process.env.REACT_APP_CURRENCY_API_KEY;
+        console.log(apikey)
+        const apiUrl = `https://api.currencyapi.com/v3/latest?apikey=cur_live_qEJLtoafPAiDAKP7HllINdiOYA6ZhrZhYTIjnYb5&currencies=EGP%2CEUR%2CUSD%2CCAD`;
+        const response = await fetch(apiUrl);
         const currencydata = await response.json();
         setRates(currencydata.data);
         setLoading(false);
