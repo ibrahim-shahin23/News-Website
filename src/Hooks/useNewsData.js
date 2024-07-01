@@ -12,7 +12,8 @@ const useNewsData = (category, searchTerm) => {
         const categoryParam = category ? `&category=${category}` : '';
         const searchParam = searchTerm ? `&q=${searchTerm}` : '';
         const url = apiUrl+categoryParam + searchParam ;
-        const response = await fetch(url);
+        const response = await fetch(url) 
+        
         const data = await response.json();
 
         setNewsData(data.articles);

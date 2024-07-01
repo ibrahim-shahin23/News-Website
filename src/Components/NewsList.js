@@ -32,7 +32,7 @@ const NewsList = (props) => {
               <Card.Img src={article.urlToImage} variant="top" />
               <Card.Body>
                 <Card.Title>{article.title}</Card.Title>
-                <Card.Text>{article.description}</Card.Text>
+                <Card.Text>{article.author}</Card.Text>
                 <Card.Link href={article.url}>Read More</Card.Link>
               </Card.Body>
             </Card>

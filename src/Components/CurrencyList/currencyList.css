@@ -1,0 +1,23 @@
+.rates-table {
+    width: 100%; /* Adjust width as needed */
+    border-collapse: collapse;
+  }
+  
+  .rates-table-header {
+    background-color: #f2f2f2; /* Light gray background for header */
+  }
+  
+  .rates-table-row:nth-child(even) {
+    background-color: #f7f7f7; /* Alternate row background for better readability */
+  }
+  
+  .rates-table-row {
+    border-bottom: 1px solid #ddd; /* Table row borders */
+    padding: 10px;
+  }
+  
+  .rates-table-cell {
+    text-align: left; /* Left-align currency codes and exchange rates */
+    padding: 5px;
+  }
+  

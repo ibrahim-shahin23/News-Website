@@ -1,0 +1,31 @@
+.table {
+    background-image: url("https://image.made-in-china.com/44f3j00kPIoqfGlOHbL/Gold-Metal-Au-Alloy-Xau-Alloy-Gold-Alloy-Gold.webp"); /* Replace with your image URL */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.8; /* Reduce table opacity for better readability over image */
+    font-size: 1.2rem; /* Increase overall font size */
+  }
+  
+  .table th {
+    color: white; /* Text color for readability over dark background */
+    font-size: 1.3rem; /* Increase header and cell font size */
+    padding: 15px; /* Add some padding for better spacing */
+    text-align: center; /* Center the content within cells */
+  }
+  .table td {
+    color: rgb(57, 54, 54); /* Text color for readability over dark background */
+    font-size: 1.3rem; /* Increase header and cell font size */
+    padding: 15px; /* Add some padding for better spacing */
+    text-align: center; /* Center the content within cells */
+  }
+  
+  .table th {
+    background-color: #333; /* Add a subtle background color to the header */
+  }
+  
+  h3 {
+    font-size: 1.5rem; /* Increase heading font size */
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Add some space below the heading */
+  }

@@ -11,8 +11,8 @@ import {
 } from 'react-bootstrap';
 import NewsList from './Components/NewsList';
 import { useState } from 'react';
-import CurrencyList from './Components/currencyList';
-import GoldList from './Components/GoldList.js';
+import CurrencyList from './Components/CurrencyList/currencyList.js';
+import GoldList from './Components/GoldList/GoldList.js';
 function App() {
   const [category, setCategory] = useState('');
   const [searchTerm, setSearchTerm] = useState('');
@@ -20,8 +20,10 @@ function App() {
     setCategory(category);
     setSearchTerm('');
   };
-  const myStyles = {
-  backgroundColor: 'rgb(222 226 227)'}
+
+  const navStyle = {
+    backgroundColor: 'rgb(222 226 227)',
+  };
   const handleSearch = (event) => {
     event.preventDefault();
     setCategory('');
@@ -29,7 +31,7 @@ function App() {
   };
   return (
     <>
-      <Navbar style={myStyles} expand="lg" className="mb-4">
+      <Navbar style={navStyle} expand="lg" className="mb-4">
         <Container>
           <Navbar.Brand href="/" className="fw-bold fs-4">
             News App
@@ -108,16 +110,13 @@ function App() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <Container>
-        <Row>
-          <Col className='m-3'>
-        <h3>Gold Prices</h3>
+      <Container >
+        <Row className="m-5">
           <GoldList />
-          </Col>
-        <Col className='m-3'>
+        </Row>
+        <Row className="m-4">
           <h3>Currency Rates</h3>
           <CurrencyList />
-        </Col>
         </Row>
       </Container>
       <Container>
