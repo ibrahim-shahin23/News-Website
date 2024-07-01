@@ -15,6 +15,7 @@ const CurrencyList = () => {
   return (
     <Container>
       <Row>
+      <h1 className="header">Currency Rates</h1>
         <Col>
           <table className="rates-table">
             <thead >

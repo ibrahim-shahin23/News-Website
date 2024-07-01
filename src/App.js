@@ -111,11 +111,10 @@ function App() {
         </Container>
       </Navbar>
       <Container >
-        <Row className="m-5">
+        <Row className="m-3">
           <GoldList />
         </Row>
-        <Row className="m-4">
-          <h3>Currency Rates</h3>
+        <Row className="mb-5">
           <CurrencyList />
         </Row>
       </Container>

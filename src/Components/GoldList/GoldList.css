@@ -6,6 +6,9 @@
     opacity: 0.8; /* Reduce table opacity for better readability over image */
     font-size: 1.2rem; /* Increase overall font size */
   }
+  .gold-section{
+    width: 70%;
+  }
   
   .table th {
     color: white; /* Text color for readability over dark background */
@@ -24,7 +27,7 @@
     background-color: #333; /* Add a subtle background color to the header */
   }
   
-  h3 {
+  h1 {
     font-size: 1.5rem; /* Increase heading font size */
     text-align: center; /* Center the heading */
     margin-bottom: 20px; /* Add some space below the heading */

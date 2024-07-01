@@ -14,9 +14,10 @@ const GoldList = () => {
   return (
     <Container>
       <Row>
-        <h3>Gold Prices</h3>
+        <div className='gold-section'>
+        <h1>Gold Prices</h1>
         <table className="table table-striped">
-          <thead>
+          <thead >
             <tr>
               <th>Gold karat</th>
               <th>Price in EGP</th>
@@ -31,6 +32,8 @@ const GoldList = () => {
             ))}
           </tbody>
         </table>
+
+        </div>
       </Row>
     </Container>
   );

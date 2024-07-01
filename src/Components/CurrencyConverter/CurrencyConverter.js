@@ -30,7 +30,7 @@ function CurrencyConverter({ rates }) {
 
   return (
 <div className="converter-container">
-      <h2>Currency Converter</h2>
+      <h4>Currency Converter</h4>
       <div className="input-group">
         <select value={fromCurrency} onChange={(e) => handleCurrencyChange(e, 'from')} className="currency-select">
           {Object.keys(rates).map((currencyCode) => (
