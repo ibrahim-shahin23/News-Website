@@ -9,6 +9,8 @@ import {
   Row,
 } from 'react-bootstrap';
 import NewsList from '../Components/NewsList';
+import './NewsFeed.css'
+import background from '../background4.jpg'
 
 const NewsFeed = () => {
   const [category, setCategory] = useState('');
@@ -25,6 +27,7 @@ const NewsFeed = () => {
 
   return (
     <div>
+      <img class="img-bg" src={background} alt="background" />
       <Container className='mt-5'>
         <Row>
           <Col xs={12} md={3}>
