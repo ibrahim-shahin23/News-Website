@@ -6,7 +6,7 @@ import { useState } from 'react';
 const NewsList = (props) => {
   const { category, searchTerm } = props;
   const [currentPage, setCurrentPage] = useState(1);
-  const pageSize = 6;
+  const pageSize = 4;
   const onPageChange = (pageNumber)=> setCurrentPage(pageNumber)
 
   const { newsData, loading, error } = useNewsData(category, searchTerm);

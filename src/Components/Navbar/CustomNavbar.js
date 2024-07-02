@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const CustomNavbar = () => {
 
   return (
-    <nav className="navbar bg-primary navbar-expand-sm ">
+    <nav className="navbar bg-secondary navbar-expand-sm ">
         <Link className="navbar-brand"style={{ marginLeft: '20px' }} to="/">
           News
         </Link>
