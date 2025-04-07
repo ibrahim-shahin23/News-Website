@@ -32,7 +32,7 @@ const NewsFeed = () => {
         <Row>
           <Col xs={12} md={3}>
             <h5>Categories</h5>
-            <Nav className="flex-column">
+            <Nav className="flex-column bg-light border rounded-2">
               <Nav.Link
                 onClick={() => {
                   handleCategoryClick('General');

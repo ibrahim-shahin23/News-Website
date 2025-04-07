@@ -10,7 +10,7 @@ const CustomNavbar = () => {
           News
         </Link>
         <Link className="navbar-brand"style={{ marginLeft: '10px' }} to="/gold&currencies">
-        gold&currencies
+        gold & currencies
         </Link>
     </nav>
   );

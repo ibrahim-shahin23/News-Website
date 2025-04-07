@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './CurrencyConverter.css'
+
 function CurrencyConverter({ rates }) {
   const [fromCurrency, setFromCurrency] = useState('EGP');
   const [toCurrency, setToCurrency] = useState('USD');
